@@ -1,6 +1,27 @@
 # Compiled class file
 *.class
 
+
+.classpath
+
+.project
+
+.replit
+
+
+pom.xml
+
+replit.nix
+
+
+springboot-5.3.6.pom
+
+
+org.eclipse.jdt.apt.core.prefs
+
+org.eclipse.jdt.core.prefs
+
+org.eclipse.m2e.core.prefs
 # Log file
 *.log
 
