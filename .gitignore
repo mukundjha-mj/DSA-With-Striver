@@ -1,27 +1,32 @@
 # Compiled class file
 *.class
 
-
+# Ignore build artifacts and settings
+.settings/
+target/
 .classpath
-
 .project
 
+# Replit-specific files
 .replit
-
-
-pom.xml
-
 replit.nix
 
+# Input/output test files
+input.txt
+output.txt
 
+# IDE/OS files
+.DS_Store
+
+# Spring-related
 springboot-5.3.6.pom
 
+# Optional: ignore README (only if you don’t want to track it)
+# Readme.md
 
-org.eclipse.jdt.apt.core.prefs
+# Maven
+*.log
 
-org.eclipse.jdt.core.prefs
-
-org.eclipse.m2e.core.prefs
 # Log file
 *.log
 
