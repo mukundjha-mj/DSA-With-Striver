@@ -11,9 +11,7 @@ target/
 .replit
 replit.nix
 
-# Input/output test files
-input.txt
-output.txt
+
 
 # IDE/OS files
 .DS_Store
@@ -32,6 +30,8 @@ springboot-5.3.6.pom
 
 # BlueJ files
 *.ctxt
+
+pom.xml
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
