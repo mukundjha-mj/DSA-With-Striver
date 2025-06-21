@@ -1,2 +1,4 @@
-2
-3
+Original Number: 65
+Reverse Number: 56
+Original Number: 457
+Reverse Number: 754
