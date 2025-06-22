@@ -1,4 +1,2 @@
-Original Number: 65
-Reverse Number: 56
-Original Number: -123
-Reverse Number: 0
+35 is not an Armstrong Number.
+371 is an Armstrong Number.

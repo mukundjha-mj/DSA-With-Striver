@@ -19,8 +19,43 @@ public class Day2 {
   // System.out.println((int)Math.log10(n)+1);
   // }
 
-  // probelm 2: Reverse a number
-  static void rev(int n) {
+  // problem 2: Reverse a number
+  // static void rev(int n) {
+  // boolean isNegative = false;
+  // if (n < 0) {
+  // isNegative = true;
+  // n = n * -1;
+  // }
+  // int fix = n;
+  // int revNum = 0;
+  // int lastDigit = 0;
+  // while (n > 0) {
+  // lastDigit = n % 10;
+  // n = n / 10;
+  // revNum = (revNum * 10) + lastDigit;
+  // }
+  // if (isNegative) {
+  // System.out.println("Original Number: " + fix);
+  // System.out.println("Reverse Number: " + revNum * -1);
+  // } else {
+  // System.out.println("Original Number: " + fix);
+  // System.out.println("Reverse Number: " + revNum);
+  // }
+  // // }
+
+  // // Problem 3: palindrome number
+  // static void palindrome(int n){
+  // int fix = n;
+
+  // }
+
+  // problem 3: Palindrome number
+  static void palindrome(int n) {
+    boolean isNegative = false;
+    if (n < 0) {
+      isNegative = true;
+      n = n * -1;
+    }
     int fix = n;
     int revNum = 0;
     int lastDigit = 0;
@@ -29,8 +64,14 @@ public class Day2 {
       n = n / 10;
       revNum = (revNum * 10) + lastDigit;
     }
-    System.out.println("Original Number: " + fix);
-    System.out.println("Reverse Number: " + revNum);
+    if(isNegative){
+      
+    }
+    if (fix == revNum) {
+      System.out.println(fix + " is Palindrome.");
+    } else {
+      System.out.println(fix + " is not Palindrome.");
+    }
   }
 
   public static void main(String[] args) {
@@ -39,7 +80,7 @@ public class Day2 {
     for (int i = 0; i < t; i++) {
       int n;
       n = sc.nextInt();
-      rev(n);
+      palindrome(n);
     }
     sc.close();
   }
