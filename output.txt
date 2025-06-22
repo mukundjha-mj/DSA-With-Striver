@@ -1,2 +1,2 @@
-35 is not an Armstrong Number.
-371 is an Armstrong Number.
+35: 1, 5, 7, 35, 
+371: 1, 7, 53, 371, 
