@@ -30,26 +30,46 @@ public class Day3 {
   // }
   // System.out.println();
   // }
-  // Problem 2: Print ALl Divisors with  O(√n + (no of factors * log(no of factors))
-  static void printAllDivisors(int n) {
-    System.out.print(n + ": ");
-    List<Integer> ls = new ArrayList<Integer>();
-    // O(sqrt(n))
+
+  // Problem 2: Print ALl Divisors with O(√n + (no of factors * log(no of
+  // factors))
+  // static void printAllDivisors(int n) {
+  // System.out.print(n + ": ");
+  // List<Integer> ls = new ArrayList<Integer>();
+  // // O(sqrt(n))
+  // for (int i = 1; i * i <= n; i++) {
+  // if (n % i == 0) {
+  // ls.add(i);
+  // if ((n / i) != i) {
+  // ls.add(n / i);
+  // }
+  // }
+  // }
+  // // O(no of factors * log(no of factors)): n is the number of factors
+  // Collections.sort(ls);
+  // // O(number of factors)
+  // for (int l : ls) {
+  // System.out.print(l + ", ");
+  // }
+  // System.out.println();
+  // }
+
+  // Problem 3: Prime Number
+  static void primeNumber(int n) {
+    int count = 0;
     for (int i = 1; i * i <= n; i++) {
       if (n % i == 0) {
-        ls.add(i);
-        if ((n / i) != i) {
-          ls.add(n / i);
+        count++;
+        if (n / i != i) {
+          count++;
         }
       }
     }
-    // O(no of factors * log(no of factors)): n is the number of factors
-    Collections.sort(ls);
-    // O(number of factors)
-    for (int l : ls) {
-      System.out.print(l + ", ");
+    if (count == 2) {
+      System.out.println(n + " is a Prime Number.");
+    } else {
+      System.out.println((n + " is not a Prime Number."));
     }
-    System.out.println();
   }
 
   public static void main(String[] args) {
@@ -58,7 +78,7 @@ public class Day3 {
     for (int i = 0; i < t; i++) {
       int n;
       n = sc.nextInt();
-      printAllDivisors(n);
+      primeNumber(n);
     }
     sc.close();
   }
