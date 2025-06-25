@@ -1,2 +1,0 @@
-Number of digit are: 2
-Number of digit are: 3
