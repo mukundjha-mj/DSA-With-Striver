@@ -1,11 +1,23 @@
 #!/bin/bash
 
-echo "Enter the Java file name (without .java):"
-read filename
+read -p "📄 Enter the Java file name (without .java): " filename
 
-# Compile from src/main/java and put .class in current dir
-javac "src/main/java/$filename.java"
 
-# Run the compiled class
-java -cp src/main/java "$filename" < input.txt > output.txt
+# Check if file exists
+if [ ! -f "src/main/java/$filename.java" ]; then
+  echo "❌ File src/main/java/$filename.java not found!"
+  exit 1
+fi
+
+# Compile the Java file
+javac -d . "src/main/java/$filename.java"
+if [ $? -ne 0 ]; then
+  echo "❌ Compilation failed!"
+  exit 1
+fi
+
+# Run the Java class
+echo "🚀 Running $filename..."
+java "$filename" < input.txt > output.txt
+
 

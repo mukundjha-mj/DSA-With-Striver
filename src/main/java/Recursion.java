@@ -14,12 +14,21 @@ public class Recursion {
    // }
 
    // Problem 1: Print name N times using Recursion
+   // static void f(int i, int n) {
+   // if (i > n) {
+   // return;
+   // }
+   // System.out.println("Mukund");
+   // f(i+1, n);
+   // }
+
+   // Problem 2: Print lineraly from 1 to n
    static void f(int i, int n) {
       if (i > n) {
          return;
       }
-      System.out.println("Mukund");
-      f(i+1, n);
+      System.out.println(i);
+      f(i + 1, n);
    }
 
    public static void main(String[] args) {
