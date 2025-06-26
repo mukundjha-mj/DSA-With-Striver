@@ -32,11 +32,20 @@ public class Recursion {
    // }
 
    // Problem 3: Print in terms of n->1
+   // static void f(int i, int n) {
+   // if (i < 1)
+   // return;
+   // System.out.println(i);
+   // f(i - 1, n);
+   // }
+
+   // Problem 4: Print lineraly from 1 to n (without using i+1)
    static void f(int i, int n) {
-      if (i < 1)
+      if (i < 1) {
          return;
-      System.out.println(i);
+      }
       f(i - 1, n);
+      System.out.println(i);
    }
 
    public static void main(String[] args) {
