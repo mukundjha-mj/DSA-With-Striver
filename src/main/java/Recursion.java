@@ -62,7 +62,7 @@ public class Recursion {
 
    // Problem 1: Sum of first N Number
    static int sum = 0;
-
+   
    static int sumFuncation(int i, int n) {
       if (i > n) {
          return 0;
