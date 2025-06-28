@@ -81,28 +81,33 @@ public class Recursion {
    // }
 
    // DAY 3
-   // Problem 1: Reverse an Array
-   static void revArr(int i, int arr[], int n) {
-      if (i >= n / 2) {
-         return;
-      }
-      int temp = arr[i];
-      arr[i] = arr[n - i - 1];
-      arr[n - i - 1] = temp;
-      revArr(i + 1, arr, n);
 
+   // Problem 1: Reverse an Array
+   // static void revArr(int i, int arr[], int n) {
+   // if (i >= n / 2) {
+   // return;
+   // }
+   // int temp = arr[i];
+   // arr[i] = arr[n - i - 1];
+   // arr[n - i - 1] = temp;
+   // revArr(i + 1, arr, n);
+
+   // }
+
+   // Problem 2: Check if a string is palindrome or not
+   static boolean palindrome(int i, String s) {
+      if (i >= s.length() / 2)
+         return true;
+      if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
+         return false;
+      }
+      return palindrome(i + 1, s);
    }
 
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int n = sc.nextInt();
-      int[] arr = new int[n];
-      for (int i = 0; i < n; i++) {
-         arr[i] = sc.nextInt();
-      }
-      revArr(0, arr, n);
-      for (int i = 0; i < n; i++) {
-         System.out.print(arr[i] + " ");
-      }
+      String s = "madam";
+      System.out.println(palindrome(0, s));
    }
 }
