@@ -61,21 +61,48 @@ public class Recursion {
    // DAY 2
 
    // Problem 1: Sum of first N Number
-   static int sum = 0;
-   
-   static int sumFuncation(int i, int n) {
-      if (i > n) {
-         return 0;
+   // static int sum = 0;
+   // static int sumFuncation(int i, int n) {
+   // if (i > n) {
+   // return 0;
+   // }
+   // sum = sum + i;
+   // sumFuncation(i + 1, n);
+   // return sum;
+   // }
+
+   // Problem 2: Factorial of N numbers
+   // int result = 1;
+   // static int Factorial(int n){
+   // if(n == 0){
+   // return 1;
+   // }
+   // return n * Factorial(n - 1);
+   // }
+
+   // DAY 3
+   // Problem 1: Reverse an Array
+   static void revArr(int i, int arr[], int n) {
+      if (i >= n / 2) {
+         return;
       }
-      sum = sum + i;
-      sumFuncation(i + 1, n);
-      return sum;
+      int temp = arr[i];
+      arr[i] = arr[n - i - 1];
+      arr[n - i - 1] = temp;
+      revArr(i + 1, arr, n);
+
    }
 
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int n = sc.nextInt();
-      int result = sumFuncation(1, n);
-      System.out.println(result);
+      int[] arr = new int[n];
+      for (int i = 0; i < n; i++) {
+         arr[i] = sc.nextInt();
+      }
+      revArr(0, arr, n);
+      for (int i = 0; i < n; i++) {
+         System.out.print(arr[i] + " ");
+      }
    }
 }
