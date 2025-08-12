@@ -95,19 +95,25 @@ public class Recursion {
    // }
 
    // Problem 2: Check if a string is palindrome or not
-   static boolean palindrome(int i, String s) {
-      if (i >= s.length() / 2)
-         return true;
-      if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
-         return false;
-      }
-      return palindrome(i + 1, s);
+   // static boolean palindrome(int i, String s) {
+   // if (i >= s.length() / 2)
+   // return true;
+   // if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
+   // return false;
+   // }
+   // return palindrome(i + 1, s);
+   // }
+
+   // Problem 3: Fibonacci Number
+   static int fibonacci(int n) {
+      if (n <= 1)
+         return n;
+      return fibonacci(n - 1) + fibonacci(n - 2);
    }
 
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int n = sc.nextInt();
-      String s = "madam";
-      System.out.println(palindrome(0, s));
+      System.out.println(fibonacci(n));
    }
 }
